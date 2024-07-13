@@ -1,4 +1,6 @@
-# Cloud Computing : CI/CD Workflows
+# Cloud Computing : CI/CD Workflows [REST API Update]
+
+I cloned the repo from the last assignment and will be updating it!
 
 This repository currently contains code files from an extremely simplistic fighting simulator created when the owner of this repository was still learning to program in Python.
 
