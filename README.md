@@ -1,8 +1,9 @@
 # Cloud Computing : CI/CD Workflows [REST API Update]
 
-I cloned the repo from the last assignment and will be updating it!
+The general structure of this repo is taken from the prior assignment, although I have a feeling that this isn't traditional structure, and I'm somewhat questioning whether I set this up correctly as per the assignment requests.
+This repository currently contains code files for an extremely simple REST API, related tests, and Dockerfiles for both code files.
 
-This repository currently contains code files from an extremely simplistic fighting simulator created when the owner of this repository was still learning to program in Python.
+I'm going to be 100% honest here - I did not run this prior to committing - I just checked the code as best as I could and prepared to upload it.
 
 ## About the Workflow
 The workflow in this repository should be configured to automatically run the test.py files in the src folder every time anything is pushed back to any branch. 
@@ -12,12 +13,17 @@ The requirements.txt file is very bare-bones because the code itself is bare-bon
 
 ## Notes
 
-I believe that in order to include the driver.py file in the workflow, I would have to change some of my code, which was designed to take user input. I will work on it (or replace it with alternate code).
+I'm well-aware that there are likely a handful of extra tests I should've written, like verifying the url was getting constructed correctly, but to be honest, I found getting even this much done to be somewhat overwhelming.
 
 
 ## References
-Sources consulted while trying to figure this out largely include the following although I did Google several other things that did not help or work:
 
-https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-python
-https://docs.github.com/en/actions/learn-github-actions/understanding-github-actions
-https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows
+Sources consulted while trying to figure this out largely include the following in addition to the Docker and Flask documentation: 
+
+https://dev.to/codemaker2015/build-and-deploy-flask-rest-api-on-docker-25mf
+https://restfulapi.net/http-status-codes/
+https://developers.lseg.com/en/article-catalog/article/getting-start-unit-test-for-an-http-rest-application-with-python
+https://medium.com/@oyetoketoby80/how-to-write-unit-test-for-your-rest-api-f8f71376273f
+https://auth0.com/blog/developing-restful-apis-with-python-and-flask/
+
+While I did Google other things and reference some of the in-class work, I'm not sure that those things helped or informed what I did.

@@ -1,0 +1,7 @@
+FROM python:3.12
+WORKDIR /src
+COPY requirements.txt requirements.txt
+RUN pip install -r requirements.txt
+COPY src/test.py test.py
+ENV URL=http://127.0.0.1:5000
+CMD python test.py
