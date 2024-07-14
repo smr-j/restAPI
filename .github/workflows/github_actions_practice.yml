@@ -27,7 +27,7 @@ jobs:
         run: docker build -t test-image -f src/test_Dockerfile .
 
       - name: Run the tests
-        run: docker run test-image python test.py
+        run: docker run -e URL=http://127.0.0.1:5000 test-image python test.py
 
   build_rest:
     # The type of runner that the job will run on
@@ -42,3 +42,4 @@ jobs:
 
       - name: Run the tests
         run: docker run rest-image python rest.py
+        
