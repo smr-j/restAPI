@@ -5,8 +5,6 @@ Associated with: CS6620: Cloud Computing - REST API Assignment
 Objective: This file contains tests for use with the REST API Assignment.
 '''
 import pytest
-import os
-import pytest
 from rest import create_app
 
 @pytest.fixture()
@@ -29,7 +27,7 @@ def client(app):
 
 
 def test_get_songs(client):
-	url = os.environ.get('URL') + '/songs'
+	url = '/songs'
 	response = client.get(url)
 	assert response.status_code == 200
           
@@ -41,7 +39,7 @@ def test_add_song(client):
 		    "release":"04-07-2017",
 		    "spotify link":"https://open.spotify.com/track/0mwXgKxOrmSk2veQkLbWSJ?si=3b0d11732d134fda"
 		   }
-	url = os.environ.get('URL') + '/songs'
+	url = '/songs'
 	response = client.post(url,json=new_song)
 	assert response.status_code == 201
 
@@ -54,11 +52,11 @@ def test_update_song(client):
 		"release":"02-04-2014",
 		"spotify link":"https://open.spotify.com/track/5GTziJvDhtcCR6kCr6Ir8r?si=c3ef1d4ee015422a"
 	}
-	url = os.environ.get('URL') + '/songs/2'
+	url = '/songs/2'
 	response = client.put(url, json=updated_song)
 	assert response.status_code == 200
 
 def test_delete_song(client):
-	url = os.environ.get('URL') + '/songs/2'
+	url = '/songs/2'
 	response = client.delete(url)
 	assert response.status_code == 200
