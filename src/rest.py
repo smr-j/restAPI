@@ -6,7 +6,11 @@ Objective: This file sets up a simple REST API.
 '''
 from flask import Flask, request, jsonify
 
-app = Flask(__name__)
+def create_app():
+	app = Flask(__name__)
+	return app
+	
+app = create_app()
 
 # Create test data in the form of a song catalog.
 songs = [
