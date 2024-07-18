@@ -3,5 +3,5 @@ WORKDIR /src
 COPY requirements.txt requirements.txt
 RUN pip install -r requirements.txt
 COPY src/test.py test.py
-ENV URL=http://127.0.0.1:5000
+COPY src/rest.py rest.py
 CMD python test.py
